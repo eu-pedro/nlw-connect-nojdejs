@@ -13,6 +13,7 @@ import { env } from './env'
 import { accessInviteLinkRoute } from './routes/acess-invite-link-route'
 import { getSubscriberInviteClicksRoute } from './routes/get-subscriber-invite-clicks-route'
 import { getSubscriberInvitesCountRoute } from './routes/get-subscriber-invites-count-route'
+import { getSubscriberRankingPositionRoute } from './routes/get-subscriber-position-route'
 
 const app = fastify().withTypeProvider<ZodTypeProvider>()
 
@@ -39,6 +40,7 @@ app.register(subscribeToEventRoute)
 app.register(accessInviteLinkRoute)
 app.register(getSubscriberInviteClicksRoute)
 app.register(getSubscriberInvitesCountRoute)
+app.register(getSubscriberRankingPositionRoute)
 
 app
   .listen({
